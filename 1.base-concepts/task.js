@@ -28,12 +28,12 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 
   let monthlyPayment;
   if (monthlyRate === 0) {
-    // Если ставка 0, платёж просто делится на месяцы
     monthlyPayment = loanBody / countMonths;
   } else {
     monthlyPayment = loanBody * (monthlyRate + (monthlyRate / (Math.pow(1 + monthlyRate, countMonths) - 1)));
   }
-
+  
   const totalPayment = monthlyPayment * countMonths;
+  
   return Math.round(totalPayment * 100) / 100;
 }
