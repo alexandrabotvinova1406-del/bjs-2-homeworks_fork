@@ -57,7 +57,7 @@ function averageEvenElementsWorker(...arr) {
     }
   }
   
-  return maxWorkerResult;
+  return countEven === 0 ? 0 : sumEven / countEven;
 }
 
 function makeWork (arrOfArr, func) {
