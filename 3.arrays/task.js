@@ -4,5 +4,10 @@ function compareArrays(arr1, arr2) {
 }
 
 function getUsersNamesInAgeRange(users, gender) {
+  const filtered = users.filter(user => user.gender === gender);
+  
+  if (filtered.length === 0) return 0;
+  const sum = filtered.reduce((acc, user) => acc + user.age, 0);
+  return sum / filtered.length;
   
 }
