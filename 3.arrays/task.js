@@ -9,3 +9,5 @@ function getUsersNamesInAgeRange(users, gender) {
   const sum = filtered.reduce((acc, user) => acc + user.age, 0);
   return sum / filtered.length;
 }
+
+module.exports = {compareArrays, getUsersNamesInAgeRange};
